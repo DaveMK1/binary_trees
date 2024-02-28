@@ -10,7 +10,7 @@
 int check_perfection_recursive(const binary_tree_t *tree,
 		size_t terminal_depth, size_t level)
 {
-	if (is_leaf(tree))
+	if (is_terminal(tree))
 		return (level == terminal_depth ? 1 : 0);
 	if (tree->left == NULL || tree->right == NULL)
 		return (0);
@@ -36,7 +36,7 @@ size_t calculate_depth(const binary_tree_t *tree)
  */
 const binary_tree_t *get_terminal_node(const binary_tree_t *tree)
 {
-	if (is_leaf(tree) == 1)
+	if (is_terminal(tree) == 1)
 		return (tree);
 	return (tree->left ? get_terminal_node(tree->left) : get_terminal_node(tree->right));
 }
