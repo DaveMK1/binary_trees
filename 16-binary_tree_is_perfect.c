@@ -1,5 +1,6 @@
 #include "binary_trees.h"
 
+
 /**
  * check_perfection_recursive - checks if binary tree is perfect recursively
  * @tree: root node of the tree to check
@@ -38,7 +39,8 @@ const binary_tree_t *get_terminal_node(const binary_tree_t *tree)
 {
 	if (is_terminal(tree) == 1)
 		return (tree);
-	return (tree->left ? get_terminal_node(tree->left) : get_terminal_node(tree->right));
+	return (tree->left ? get_terminal_node(tree->left) :
+			get_terminal_node(tree->right));
 }
 
 /**
@@ -60,5 +62,6 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 {
 	if (tree == NULL)
 		return (0);
-	return (check_perfection_recursive(tree, calculate_depth(get_terminal_node(tree)), 0));
+	return (check_perfection_recursive(tree,
+				calculate_depth(get_terminal_node(tree)), 0));
 }
