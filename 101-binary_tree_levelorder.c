@@ -29,9 +29,9 @@ void perform_on_level(const binary_tree_t *tree, size_t level, void (*func)(int)
 {
 	if (tree == NULL)
 		return;
-	if (level == 0)
+	if (level == 1)
 		func(tree->n);
-	else if (level > 0)
+	else if (level > 1)
 	{
 		perform_on_level(tree->left, level - 1, func);
 		perform_on_level(tree->right, level - 1, func);
