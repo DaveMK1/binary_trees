@@ -1,5 +1,11 @@
 #include "binary_trees.h"
 
+int check_perfection_recursive(const binary_tree_t *tree,
+                size_t terminal_depth, size_t level);
+size_t calculate_depth(const binary_tree_t *tree);
+const binary_tree_t *get_terminal_node(const binary_tree_t *tree);
+unsigned char is_terminal(const binary_tree_t *node);
+int binary_tree_is_perfect(const binary_tree_t *tree);
 
 /**
  * check_perfection_recursive - checks if binary tree is perfect recursively
