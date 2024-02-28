@@ -25,9 +25,9 @@ binary_tree_t *binary_tree_rotate_left(binary_tree_t *tree)
 	if (tmp != NULL)
 	{
 		if (tmp->left == tree)
-			tmp->left = pivot;
+			tmp->left = piv;
 		else
-			tmp->right = pivot;
+			tmp->right = piv;
 	}
 
 	return (piv);
